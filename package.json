@@ -1,0 +1,54 @@
+{
+  "name": "load-conf",
+  "version": "0.0.1",
+  "description": "Load any configuration file",
+  "homepage": "https://github.com/codejamninja/load-conf",
+  "bugs": {
+    "url": "https://github.com/codejamninja/load-conf/issues",
+    "email": "jam@codejam.ninja"
+  },
+  "license": "MIT",
+  "author": {
+    "name": "Jam Risser",
+    "email": "jam@codejam.ninja",
+    "url": "https://codejam.ninja"
+  },
+  "files": ["lib"],
+  "main": "lib/index.js",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/codejamninja/load-conf"
+  },
+  "scripts": {
+    "build": "babel src -d lib",
+    "clean": "rimraf lib",
+    "lint": "eslint ./",
+    "lint:fix": "eslint --fix ./",
+    "test": "npm run lint && jest"
+  },
+  "dependencies": {
+    "fs-extra": "^5.0.0",
+    "js-yaml": "^3.11.0"
+  },
+  "devDependencies": {
+    "babel-cli": "^6.26.0",
+    "babel-eslint": "^8.2.2",
+    "babel-preset-env": "^1.6.1",
+    "babel-preset-stage-2": "^6.24.1",
+    "eslint": "^4.18.1",
+    "eslint-config-airbnb": "^16.1.0",
+    "eslint-config-prettier": "^2.9.0",
+    "eslint-plugin-import": "^2.9.0",
+    "eslint-plugin-jest": "^21.15.0",
+    "jest": "^22.4.3",
+    "rimraf": "^2.6.2"
+  },
+  "engines": {
+    "node": ">=4.0.0"
+  },
+  "eslintIgnore": ["lib"],
+  "jest": {
+    "testMatch": ["**/tests/**/[^_]*.js"],
+    "verbose": true
+  }
+}
