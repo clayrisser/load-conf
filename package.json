@@ -1,6 +1,6 @@
 {
   "name": "load-conf",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "Load any configuration file",
   "homepage": "https://github.com/codejamninja/load-conf",
   "bugs": {
@@ -13,7 +13,9 @@
     "email": "jam@codejam.ninja",
     "url": "https://codejam.ninja"
   },
-  "files": ["lib"],
+  "files": [
+    "lib"
+  ],
   "main": "lib/index.js",
   "repository": {
     "type": "git",
@@ -24,6 +26,7 @@
     "clean": "rimraf lib",
     "lint": "eslint ./",
     "lint:fix": "eslint --fix ./",
+    "prepublish": "npm run build",
     "test": "npm run lint && jest"
   },
   "dependencies": {
@@ -46,9 +49,13 @@
   "engines": {
     "node": ">=4.0.0"
   },
-  "eslintIgnore": ["lib"],
+  "eslintIgnore": [
+    "lib"
+  ],
   "jest": {
-    "testMatch": ["**/tests/**/[^_]*.js"],
+    "testMatch": [
+      "**/tests/**/[^_]*.js"
+    ],
     "verbose": true
   }
 }
