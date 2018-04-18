@@ -1,1 +1,1 @@
-module.exports = { howdy: 'javascript' };
+export default { howdy: 'javascript' };

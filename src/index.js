@@ -37,7 +37,9 @@ export function loadJson(path) {
 export function loadJavaScript(path) {
   try {
     // eslint-disable-next-line global-require,import/no-dynamic-require
-    return require(path);
+    const config = require(path);
+    if (config.default) return config.default;
+    return config;
   } catch (err) {
     return null;
   }

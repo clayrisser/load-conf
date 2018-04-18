@@ -1,6 +1,6 @@
 {
   "name": "load-conf",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "Load any configuration file",
   "homepage": "https://github.com/codejamninja/load-conf",
   "bugs": {
@@ -27,7 +27,8 @@
     "lint": "eslint ./",
     "lint:fix": "eslint --fix ./",
     "prepublish": "npm run build",
-    "test": "npm run lint && jest"
+    "test": "npm run lint && jest",
+    "test:reset": "jest --clearCache && npm run test"
   },
   "dependencies": {
     "fs-extra": "^5.0.0",
