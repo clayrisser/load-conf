@@ -1,15 +1,15 @@
 import fs from 'fs-extra';
 import { safeLoad } from 'js-yaml';
 
-export default function loadConf(path, type) {
+export default function loadConf(path, defaultsTo = {}, type) {
   if (!fs.existsSync(path)) return {};
   switch (type) {
     case 'json':
-      return loadJson(path) || {};
+      return loadJson(path) || defaultsTo;
     case 'yaml':
-      return loadYaml(path) || {};
+      return loadYaml(path) || defaultsTo;
     case 'javascript':
-      return loadJavaScript(path) || {};
+      return loadJavaScript(path) || defaultsTo;
   }
   let config = loadJson(path);
   if (!config) config = loadYaml(path);

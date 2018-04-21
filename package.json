@@ -1,6 +1,6 @@
 {
   "name": "load-conf",
-  "version": "0.0.3",
+  "version": "0.0.4",
   "description": "Load any configuration file",
   "homepage": "https://github.com/codejamninja/load-conf",
   "bugs": {
@@ -23,7 +23,7 @@
   },
   "scripts": {
     "build": "babel src -d lib",
-    "clean": "rimraf lib",
+    "clean": "watchman watch-del-all && rimraf lib",
     "lint": "eslint ./",
     "lint:fix": "eslint --fix ./",
     "prepublish": "npm run build",
