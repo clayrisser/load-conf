@@ -2,7 +2,7 @@ import fs from 'fs-extra';
 import { safeLoad } from 'js-yaml';
 
 export default function loadConf(path, defaultsTo = {}, type) {
-  if (!fs.existsSync(path)) return {};
+  if (!fs.existsSync(path)) return defaultsTo;
   switch (type) {
     case 'json':
       return loadJson(path) || defaultsTo;
