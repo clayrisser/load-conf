@@ -4,6 +4,8 @@
 
 > Load any configuration file
 
+![](assets/load-conf.png)
+
 Please ★ this repo if you found it useful ★ ★ ★
 
 
